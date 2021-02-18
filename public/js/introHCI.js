@@ -10,4 +10,11 @@ $(document).ready(function() {
  */
 function initializePage() {
 	// your code here
+	$('.likeCtr').click(recordClick);
+	$('.likeBtn').click(recordClick);
+}
+
+function recordClick(e) {
+	e.preventDefault();
+	ga("send", "event", 'like', 'click');
 }
